@@ -2,8 +2,8 @@ public class Usuario{
     private String nombreUsuario;
     private String pass;
 
-    public Usuario(String nombreUsario, String pass){
-        this.nombreUsuario = nombreUsario;
+    public Usuario(String nombreUsuario, String pass){
+        this.nombreUsuario = nombreUsuario;
         this.pass = pass;
     }
 
