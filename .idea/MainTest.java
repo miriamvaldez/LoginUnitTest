@@ -16,6 +16,11 @@ public class MainTest{
 
     @Test
     public void testMain(){
-        String input = "usuario"
+        String input = "usuario\ncontraseña\n";
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+
+        final String expectedOutput = "Inicio de sesión exitoso. Bienvenido usuario!";
+        assertEquals(expectedOutput, Main.main(new String[]{}));
     }
 }
