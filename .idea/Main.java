@@ -11,5 +11,14 @@ public class Main {
         String pass = scanner.nextLine();
 
         Usuario usuario = new Usuario(nombreUsuario, pass);
+
+        if (Autenticador.verificarCredenciales(usuario)) {
+            System.out.println("Inicio de sesión correcto. Bienvenido de vuelta "
+                    + nombreUsuario +"!");
+        }else{
+            System.out.println("Credenciales incorrectas. El programa se cerrará");
+        }
+
+        scanner.close();
     }
 }
